@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Wasim Akram | Front-End Developer & Power Pages Specialist</title>
+    <meta name="description" content="Portfolio of Wasim Akram — Front-End Developer specializing in Microsoft Power Pages, custom Web Templates, Bootstrap, and React.">
+    <meta name="keywords" content="Microsoft Power Pages, Power Pages Developer, Dataverse, Liquid Templates, Entra ID, Azure AD, Front-End Developer, Wasim Akram, Islamabad, Pakistan, React.js, WordPress, Bootstrap">
+    <meta name="author" content="Wasim Akram">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wasim Akram | Front-End Developer & Power Pages Specialist">
+    <meta property="og:description" content="Portfolio of Wasim Akram — Front-End Developer specializing in Microsoft Power Pages, custom Web Templates, Bootstrap, and React.">
+    <meta property="og:url" content="https://wasimakram-turk.github.io/powerpages">
+    <meta property="og:image" content="assets/images/Trillora.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ============================================================
+         AMBIENT GLOW BACKGROUND
+    ============================================================ -->
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+    </div>
+
+    <!-- ============================================================
+         HEADER / NAV
+    ============================================================ -->
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+
+            <a href="#about" class="logo" id="nav-logo" aria-label="Go to top">
+                <span class="logo-mark"><i class="fa-solid fa-bolt-lightning"></i></span>
+                <span class="logo-text">Wasim<span class="logo-accent">.dev</span></span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a href="#about"      class="nav-link active" data-section="about">Home</a>
+                <a href="#projects"   class="nav-link" data-section="projects">Power Pages</a>
+                <a href="#skills"     class="nav-link" data-section="skills">Skills</a>
+                <a href="#experience" class="nav-link" data-section="experience">Journey</a>
+                <a href="#contact"    class="nav-link" data-section="contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://www.linkedin.com/in/wasim-akram-turk" target="_blank" rel="noopener noreferrer" class="header-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/wasim-akram-turk" target="_blank" rel="noopener noreferrer" class="header-social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://wa.me/923035133332" target="_blank" rel="noopener noreferrer" class="header-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#contact" class="btn btn-sm btn-ghost" id="btn-hire-me">Hire Me</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         MOBILE DRAWER
+    ============================================================ -->
+    <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+    <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+        <div class="drawer-header">
+            <span class="logo">
+                <span class="logo-mark"><i class="fa-solid fa-bolt-lightning"></i></span>
+                <span class="logo-text">Wasim<span class="logo-accent">.dev</span></span>
+            </span>
+            <button class="drawer-close" id="drawer-close" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <nav class="drawer-nav">
+            <a href="#about"      class="drawer-link" id="m-home">Home</a>
+            <a href="#projects"   class="drawer-link" id="m-projects">Power Pages Work</a>
+            <a href="#skills"     class="drawer-link" id="m-skills">Skills</a>
+            <a href="#experience" class="drawer-link" id="m-experience">Journey</a>
+            <a href="#contact"    class="drawer-link" id="m-contact">Contact</a>
+        </nav>
+        <div class="drawer-cta">
+            <a href="./Wasim Akram CV Portfolio.pdf" download="Wasim_Akram_CV.pdf" class="btn btn-primary btn-full" id="drawer-cv-btn">
+                <i class="fa-solid fa-download"></i> Download CV
+            </a>
+        </div>
+    </aside>
+
+    <!-- ============================================================
+         MAIN CONTENT
+    ============================================================ -->
+    <main>
+
+        <!-- ──────────────────────────────────────────────
+             HERO SECTION
+        ────────────────────────────────────────────── -->
+        <section id="about" class="hero-section">
+            <div class="container hero-grid">
+
+                <!-- Left: Text Content -->
+                <div class="hero-copy">
+
+                    <!-- Availability badge -->
+                    <div class="availability-badge" data-aos="fade-down" data-aos-duration="700">
+                        <span class="pulse-indicator">
+                            <span class="pulse-ring"></span>
+                            <span class="pulse-core"></span>
+                        </span>
+                        <span>Currently Working on Power Pages</span>
+                    </div>
+
+                    <h1 class="hero-heading" data-aos="fade-up" data-aos-delay="100">
+                        Building Secure,<br>
+                        Scalable <em class="gradient-em">Power Pages</em><br>
+                        Portals
+                    </h1>
+
+                    <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
+                        Front-End Developer & Power Pages Specialist with 2+ years crafting enterprise portal solutions — custom Liquid Web Templates, Dataverse integrations, Entra ID authentication, and pixel-perfect responsive UI.
+                    </p>
+
+                    <!-- CTA Row -->
+                    <div class="hero-cta-row" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#projects" class="btn btn-primary" id="btn-explore-work">
+                            Explore Power Pages Work <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                        <a href="./Wasim Akram CV Portfolio.pdf" download="Wasim_Akram_CV.pdf" class="btn btn-outline" id="btn-dl-cv">
+                            <i class="fa-solid fa-download"></i> Download CV
+                        </a>
+                        <button class="btn btn-copy-email" id="btn-hero-copy-email" aria-label="Copy email address">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="email-label">eng.wasimakram@live.com</span>
+                            <i class="fa-solid fa-copy copy-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-item">
+                            <span class="stat-value">2+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-value">10+</span>
+                            <span class="stat-label">Projects Delivered</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-value">2+</span>
+                            <span class="stat-label">Power Pages Portals</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Glassmorphic Power Pages Panel -->
+                <div class="hero-panel-wrapper" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="900">
+                    <div class="panel-glow-ring"></div>
+
+                    <!-- Floating tech badges -->
+                    <div class="tech-badge badge-dataverse" aria-hidden="true">
+                        <i class="fa-solid fa-database"></i> Dataverse
+                    </div>
+                    <div class="tech-badge badge-liquid" aria-hidden="true">
+                        <i class="fa-brands fa-html5"></i> Liquid
+                    </div>
+                    <div class="tech-badge badge-entraid" aria-hidden="true">
+                        <i class="fa-solid fa-shield-halved"></i> Entra ID
+                    </div>
+
+                    <div class="code-panel">
+                        <div class="code-panel-bar">
+                            <span class="dot dot-r"></span>
+                            <span class="dot dot-y"></span>
+                            <span class="dot dot-g"></span>
+                            <span class="panel-filename"><i class="fa-solid fa-file-code"></i> portal-config.liquid</span>
+                        </div>
+                        <div class="code-panel-body">
+<pre><code><span class="c-comment">{# Power Pages — Liquid Web Template #}</span>
+<span class="c-tag">{% assign</span> <span class="c-var">user</span> = <span class="c-str">request.user</span> <span class="c-tag">%}</span>
+
+<span class="c-tag">{% if</span> <span class="c-var">user.roles</span> contains <span class="c-str">"Portal Admin"</span> <span class="c-tag">%}</span>
+  <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"admin-dashboard"</span><span class="c-tag">&gt;</span>
+    <span class="c-comment">{# Dataverse entity list #}</span>
+    <span class="c-tag">{% entitylist</span> <span class="c-attr">name</span>:<span class="c-str">"trillora_data"</span> <span class="c-tag">%}</span>
+      <span class="c-tag">{% for</span> <span class="c-var">row</span> in entityview.records <span class="c-tag">%}</span>
+        <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"data-row"</span><span class="c-tag">&gt;</span>
+          {{ row.name }} — {{ row.status }}
+        <span class="c-tag">&lt;/div&gt;</span>
+      <span class="c-tag">{% endfor %}</span>
+    <span class="c-tag">{% endentitylist %}</span>
+  <span class="c-tag">&lt;/div&gt;</span>
+<span class="c-tag">{% endif %}</span>
+
+<span class="c-comment">// Entra ID auth provider config</span>
+<span class="c-kw">const</span> <span class="c-var">authConfig</span> = {
+  provider: <span class="c-str">"microsoft"</span>,
+  tenantId: <span class="c-str">process.env.TENANT_ID</span>,
+  scopes: [<span class="c-str">"openid"</span>, <span class="c-str">"profile"</span>]
+};</code></pre>
+                        </div>
+                        <!-- Status bar -->
+                        <div class="code-panel-status">
+                            <span class="status-dot active"></span>
+                            <span>Portal authenticated · Entra ID connected</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ──────────────────────────────────────────────
+             POWER PAGES SHOWCASE
+        ────────────────────────────────────────────── -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+
+                <header class="section-header" data-aos="fade-up">
+                    <span class="section-eyebrow"><i class="fa-solid fa-star"></i> Featured Work</span>
+                    <h2 class="section-title">Microsoft Power Pages <span class="gradient-em">Showcase</span></h2>
+                    <p class="section-desc">Enterprise portal solutions and front-end projects built with precision, performance, and scalability in mind.</p>
+                </header>
+
+                <div class="projects-grid">
+
+                    <!-- Card 1: Trillora — PRIMARY highlight -->
+                    <div class="project-card card-primary-highlight" data-aos="fade-up" data-aos-delay="0">
+                        <img src="assets/images/Trillora.png" alt="Trillora Portal" class="project-img">
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span class="status-chip chip-done"><i class="fa-solid fa-circle-check"></i> Completed</span>
+                                <span class="card-client">Trillora · Packaging</span>
+                            </div>
+                            <h3 class="card-title">Power Pages Business Data Portal</h3>
+                            <p class="card-desc">Business data visualization platform built on Microsoft Power Pages. Custom portal styling, Dataverse UI integration, responsive layouts, and custom Web Templates using Liquid, HTML, CSS, and Bootstrap.</p>
+                            <ul class="card-points">
+                                <li>Custom Liquid Web Templates for portal layouts & UI routing</li>
+                                <li>Dataverse entity list/form customization with column filtering</li>
+                                <li>Responsive mobile-first portal UI with Bootstrap integration</li>
+                                <li>Role-based content visibility via portal web roles</li>
+                            </ul>
+                            <div class="card-tags">
+                                <span class="tag tag-power">Power Pages</span>
+                                <span class="tag">Dataverse</span>
+                                <span class="tag">Liquid</span>
+                                <span class="tag">Bootstrap</span>
+                                <span class="tag">HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Vendor Portal — IN PROGRESS -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="80">
+                        <img src="assets/images/project-4.jpg" alt="Vendor Portal" class="project-img">
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span class="status-chip chip-progress"><i class="fa-solid fa-spinner fa-spin"></i> In Progress</span>
+                                <span class="card-client">Enterprise Solution</span>
+                            </div>
+                            <h3 class="card-title">Vendor Portal</h3>
+                            <p class="card-desc">Enterprise Power Pages solution focusing on front-end customization, custom Web Templates, and Dataverse UI integration. Includes Microsoft Entra ID (Azure AD) configuration as an added identity/authentication capability.</p>
+                            <ul class="card-points">
+                                <li>Entra ID identity provider configuration & user login mapping</li>
+                                <li>Custom Liquid web templates for authenticated portal views</li>
+                                <li>JavaScript Portal WebAPI calls for dynamic Dataverse reads</li>
+                                <li>Row-level security via table permissions & web roles</li>
+                            </ul>
+                            <div class="card-tags">
+                                <span class="tag tag-power">Microsoft Entra ID</span>
+                                <span class="tag">Azure AD</span>
+                                <span class="tag">Web Templates</span>
+                                <span class="tag">Liquid</span>
+                                <span class="tag">WebAPI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Ultimate Works -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="160">
+                        <img src="assets/images/Ultimate-works.png" alt="Ultimate Works" class="project-img">
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span class="status-chip chip-done"><i class="fa-solid fa-circle-check"></i> Completed</span>
+                                <span class="card-client">Ultimate Works · HR & Payroll</span>
+                            </div>
+                            <h3 class="card-title">Enterprise HR & Payroll System UI</h3>
+                            <p class="card-desc">Multi-module front-end dashboard for an enterprise HR and payroll application. Built with React.js component architecture and Bootstrap utility system for consistent cross-module design.</p>
+                            <ul class="card-points">
+                                <li>React.js modular component architecture with shared state</li>
+                                <li>Responsive dashboard layouts for payroll, leave, and attendance modules</li>
+                                <li>Bootstrap-based UI system with custom theme overrides</li>
+                            </ul>
+                            <div class="card-tags">
+                                <span class="tag">React.js</span>
+                                <span class="tag">Bootstrap</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML5/CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: WindowNation USA -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="240">
+                        <img src="assets/images/WindowNation.png" alt="WindowNation USA" class="project-img">
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span class="status-chip chip-done"><i class="fa-solid fa-circle-check"></i> Completed</span>
+                                <span class="card-client">WindowNation · USA</span>
+                            </div>
+                            <h3 class="card-title">Custom WordPress Front-End Integration</h3>
+                            <p class="card-desc">Created custom front-end page templates and integrated layouts with backend services for a USA-based window replacement company. Ensured cross-browser compatibility and performance optimization.</p>
+                            <ul class="card-points">
+                                <li>Custom WordPress page templates with PHP & HTML/CSS</li>
+                                <li>Backend API integration with structured front-end components</li>
+                                <li>Cross-browser compatibility & Core Web Vitals optimization</li>
+                            </ul>
+                            <div class="card-tags">
+                                <span class="tag">WordPress</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ──────────────────────────────────────────────
+             SKILLS MATRIX (PILL TAGS — NO BARS)
+        ────────────────────────────────────────────── -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+
+                <header class="section-header" data-aos="fade-up">
+                    <span class="section-eyebrow"><i class="fa-solid fa-gears"></i> Capabilities</span>
+                    <h2 class="section-title">Technical <span class="gradient-em">Skills Matrix</span></h2>
+                    <p class="section-desc">Organized by domain — from Power Pages low-code portals to front-end core and supporting tools.</p>
+                </header>
+
+                <!-- Spotlight Row: Power Pages -->
+                <div class="skills-spotlight-row" data-aos="fade-up" data-aos-delay="50">
+                    <div class="skill-card skill-card-spotlight">
+                        <div class="skill-card-header">
+                            <span class="skill-icon skill-icon-cyan"><i class="fa-solid fa-cubes"></i></span>
+                            <div>
+                                <span class="skill-eyebrow">Primary Specialty</span>
+                                <h3 class="skill-title">Power Pages & Low-Code Portals</h3>
+                            </div>
+                            <span class="spotlight-crown"><i class="fa-solid fa-award"></i></span>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="pill pill-cyan">Power Pages</span>
+                            <span class="pill pill-cyan">Dataverse Integration</span>
+                            <span class="pill pill-cyan">Liquid Web Templates</span>
+                            <span class="pill pill-cyan">Microsoft Entra ID</span>
+                            <span class="pill pill-cyan">Portal Web Roles</span>
+                            <span class="pill pill-cyan">JavaScript WebAPI</span>
+                            <span class="pill pill-cyan">Custom Authentication</span>
+                            <span class="pill pill-cyan">Entity Forms / Lists</span>
+                            <span class="pill pill-cyan">Row-Level Security</span>
+                            <span class="pill pill-cyan">Portal Styling & Theming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Supporting 3-Column Grid -->
+                <div class="skills-grid" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <span class="skill-icon"><i class="fa-solid fa-code"></i></span>
+                            <h3 class="skill-title">Front-End Core</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+                            <span class="pill"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                            <span class="pill"><i class="fa-brands fa-js"></i> JavaScript ES6+</span>
+                            <span class="pill"><i class="fa-brands fa-bootstrap"></i> Bootstrap 4/5</span>
+                            <span class="pill">Tailwind CSS</span>
+                            <span class="pill">Flexbox & Grid</span>
+                            <span class="pill">Mobile-First Design</span>
+                            <span class="pill">Responsive Layouts</span>
+                            <span class="pill">Cross-Browser Compat.</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <span class="skill-icon"><i class="fa-solid fa-layer-group"></i></span>
+                            <h3 class="skill-title">Frameworks & CMS</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="pill"><i class="fa-brands fa-react"></i> React.js</span>
+                            <span class="pill">Context API</span>
+                            <span class="pill"><i class="fa-brands fa-wordpress"></i> WordPress</span>
+                            <span class="pill">Custom Themes</span>
+                            <span class="pill">Contentstack CMS</span>
+                            <span class="pill">Headless CMS</span>
+                            <span class="pill">Component Architecture</span>
+                            <span class="pill">UI/UX Implementation</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <span class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                            <h3 class="skill-title">Tools & Workflow</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="pill">VS Code</span>
+                            <span class="pill"><i class="fa-brands fa-git-alt"></i> Git (Basic)</span>
+                            <span class="pill"><i class="fa-brands fa-chrome"></i> Chrome DevTools</span>
+                            <span class="pill">On-Page SEO</span>
+                            <span class="pill">Technical SEO</span>
+                            <span class="pill">Performance Tuning</span>
+                            <span class="pill">Web Accessibility</span>
+                            <span class="pill">Figma (Review)</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ──────────────────────────────────────────────
+             EXPERIENCE TIMELINE
+        ────────────────────────────────────────────── -->
+        <section id="experience" class="section timeline-section">
+            <div class="container">
+
+                <header class="section-header" data-aos="fade-up">
+                    <span class="section-eyebrow"><i class="fa-solid fa-clock-rotate-left"></i> Journey</span>
+                    <h2 class="section-title">Experience <span class="gradient-em">Timeline</span></h2>
+                    <p class="section-desc">A professional chronicle of my roles, projects, and academic background.</p>
+                </header>
+
+                <div class="timeline-track">
+                    <div class="timeline-spine" aria-hidden="true"></div>
+
+                    <!-- Item 1 -->
+                    <div class="tl-item tl-right" data-aos="fade-left" data-aos-delay="0">
+                        <div class="tl-node node-cyan"></div>
+                        <time class="tl-date">Apr 2024 — Present</time>
+                        <div class="tl-card glass-card">
+                            <span class="tl-role">Associate Engineer & Front-End Developer</span>
+                            <h3 class="tl-company"><i class="fa-solid fa-building"></i> GuruGroup, Islamabad</h3>
+                            <ul class="tl-points">
+                                <li>Develop & maintain responsive front-end interfaces using HTML5, CSS3, Bootstrap, and JS.</li>
+                                <li>Customize and extend Microsoft Power Pages portals — Liquid templates, Dataverse entity forms, web roles, and portal styling.</li>
+                                <li>Assist in React.js component development with context-based state management.</li>
+                                <li>Cross-browser QA across Chrome, Firefox, and Edge.</li>
+                                <li>International static & CMS websites via Contentstack for 9+ domains.</li>
+                            </ul>
+                            <div class="tl-tags">
+                                <span class="pill pill-sm">Power Pages</span>
+                                <span class="pill pill-sm">React.js</span>
+                                <span class="pill pill-sm">HTML/CSS</span>
+                                <span class="pill pill-sm">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="tl-item tl-left" data-aos="fade-right" data-aos-delay="80">
+                        <div class="tl-node node-indigo"></div>
+                        <time class="tl-date">2024</time>
+                        <div class="tl-card glass-card">
+                            <span class="tl-role">UI Developer — Enterprise Projects</span>
+                            <h3 class="tl-company"><i class="fa-solid fa-folder-open"></i> Client Projects</h3>
+                            <div class="tl-project-list">
+                                <div class="tl-project">
+                                    <strong>Ultimate Works</strong>
+                                    <span>Enterprise HR & Payroll — multi-module React.js dashboards with Bootstrap UI system</span>
+                                </div>
+                                <div class="tl-project">
+                                    <strong>WindowNation USA</strong>
+                                    <span>Custom WordPress front-end templates and API-integrated layouts</span>
+                                </div>
+                                <div class="tl-project">
+                                    <strong>Corporate Sites</strong>
+                                    <span>CecilHub (Australia), Crystal Consulting Group (UAE) — WordPress custom themes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="tl-item tl-right" data-aos="fade-left" data-aos-delay="160">
+                        <div class="tl-node node-teal"></div>
+                        <time class="tl-date">Contract Projects</time>
+                        <div class="tl-card glass-card">
+                            <span class="tl-role">Web Developer — Static & CMS Sites</span>
+                            <h3 class="tl-company"><i class="fa-solid fa-laptop-code"></i> International Domains</h3>
+                            <ul class="tl-points">
+                                <li>Built and maintained marketing sites for 9+ international domains.</li>
+                                <li>Headless CMS development via enterprise Contentstack platform.</li>
+                                <li>Domains: gurug.com, guru.au, khizaans.com, qwik.pk, crystalguru.com, sfguru.com, shipguru.net, kalo.biz, gurug.ch</li>
+                            </ul>
+                            <div class="tl-tags">
+                                <span class="pill pill-sm">Contentstack</span>
+                                <span class="pill pill-sm">Tailwind CSS</span>
+                                <span class="pill pill-sm">Bootstrap</span>
+                                <span class="pill pill-sm">SEO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Education -->
+                    <div class="tl-item tl-left" data-aos="fade-right" data-aos-delay="240">
+                        <div class="tl-node node-amber"></div>
+                        <time class="tl-date">2007 – 2011</time>
+                        <div class="tl-card glass-card">
+                            <span class="tl-role">Bachelor of Science in Computer Science</span>
+                            <h3 class="tl-company"><i class="fa-solid fa-graduation-cap"></i> Federal Urdu University</h3>
+                            <ul class="tl-points">
+                                <li><strong>Major:</strong> Software Systems</li>
+                                <li><strong>Final Project:</strong> Medical Information Exchange (MIE) — ASP.NET & C#.NET, .NET Framework 4.0</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ──────────────────────────────────────────────
+             CONTACT SECTION
+        ────────────────────────────────────────────── -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+
+                <header class="section-header" data-aos="fade-up">
+                    <span class="section-eyebrow"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+                    <h2 class="section-title">Let's <span class="gradient-em">Collaborate</span></h2>
+                    <p class="section-desc">Open to Power Pages consulting, enterprise portal projects, and front-end roles. Reach out directly.</p>
+                </header>
+
+                <div class="contact-layout">
+
+                    <!-- Left: Contact info -->
+                    <div class="contact-info" data-aos="fade-right" data-aos-delay="50">
+                        <h3 class="contact-info-title">Contact Details</h3>
+                        <p class="contact-info-sub">Available for full-time roles and consulting engagements. Response within 24 hours.</p>
+
+                        <div class="contact-cards">
+
+                            <!-- Email with copy button -->
+                            <div class="contact-card glass-card" id="email-contact-card">
+                                <div class="contact-icon-wrap contact-icon-cyan">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value" id="email-display">eng.wasimakram@live.com</span>
+                                </div>
+                                <button class="copy-btn" id="btn-copy-email-contact" aria-label="Copy email to clipboard" title="Copy email">
+                                    <i class="fa-regular fa-copy" id="copy-icon-state"></i>
+                                </button>
+                            </div>
+
+                            <!-- Phone -->
+                            <a href="tel:+923215794484" class="contact-card glass-card contact-card-link">
+                                <div class="contact-icon-wrap contact-icon-indigo">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">Phone</span>
+                                    <span class="contact-value">+92 321 579 4484</span>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square contact-external"></i>
+                            </a>
+
+                            <!-- Location -->
+                            <div class="contact-card glass-card">
+                                <div class="contact-icon-wrap contact-icon-teal">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Islamabad, Pakistan</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Socials -->
+                        <div class="social-row">
+                            <p class="social-label">Find me on</p>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/wasim-akram-turk" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-linkedin" aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com/wasim-akram-turk" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-github" aria-label="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://wa.me/923035133332" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-whatsapp" aria-label="WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Functional contact form (Web3Forms) -->
+                    <div class="contact-form-wrap glass-card" data-aos="fade-left" data-aos-delay="50">
+                        <h3 class="form-title">Send a Message</h3>
+
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <!-- Web3Forms access key — replace with key from web3forms.com -->
+                            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                            <input type="hidden" name="subject" value="New message from Wasim Akram Portfolio">
+                            <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                            <input type="checkbox" name="botcheck" style="display:none">
+
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="cf-name">Full Name</label>
+                                    <input type="text" id="cf-name" name="name" placeholder="Your full name" required autocomplete="name">
+                                    <span class="field-error" id="err-name"></span>
+                                </div>
+                                <div class="form-field">
+                                    <label for="cf-email">Email Address</label>
+                                    <input type="email" id="cf-email" name="email" placeholder="your@email.com" required autocomplete="email">
+                                    <span class="field-error" id="err-email"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="cf-subject">Subject</label>
+                                <input type="text" id="cf-subject" name="subject_line" placeholder="Power Pages portal project inquiry" required>
+                                <span class="field-error" id="err-subject"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="cf-message">Message</label>
+                                <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+                                <span class="field-error" id="err-message"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit" id="btn-send-msg">
+                                <span class="btn-text">Send Message <i class="fa-solid fa-paper-plane"></i></span>
+                                <span class="btn-loading" hidden><i class="fa-solid fa-circle-notch fa-spin"></i> Sending…</span>
+                            </button>
+                        </form>
+
+                        <!-- Success state -->
+                        <div class="form-success" id="form-success" hidden>
+                            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <h4>Message Sent!</h4>
+                            <p>Thank you — Wasim will reply within 24 hours.</p>
+                            <button class="btn btn-outline btn-sm" id="btn-send-another">Send Another</button>
+                        </div>
+
+                        <!-- Error state -->
+                        <div class="form-error-msg" id="form-error-msg" hidden>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <span>Something went wrong. Please email directly at <strong>eng.wasimakram@live.com</strong></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="#about" class="logo" aria-label="Back to top">
+                <span class="logo-mark"><i class="fa-solid fa-bolt-lightning"></i></span>
+                <span class="logo-text">Wasim<span class="logo-accent">.dev</span></span>
+            </a>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#about">Home</a>
+                <a href="#projects">Work</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Journey</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/wasim-akram-turk" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/wasim-akram-turk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://wa.me/923035133332" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <p class="footer-copy">
+                &copy; <span id="footer-year"></span> Wasim Akram &mdash; Built with vanilla HTML5, CSS3 &amp; JS
+            </p>
+        </div>
+    </footer>
+
+    <!-- Global toast notification -->
+    <div class="toast" id="global-toast" role="alert" aria-live="polite">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span class="toast-msg" id="toast-msg">Email copied!</span>
+    </div>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- App -->
+    <script src="main.js"></script>
+</body>
+</html>
