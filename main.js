@@ -177,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnSend       = document.getElementById('btn-send-msg');
   const btnBtnText    = btnSend ? btnSend.querySelector('.btn-text') : null;
   const btnBtnLoading = btnSend ? btnSend.querySelector('.btn-loading') : null;
-  const btnSendAnother = document.getElementById('btn-send-another');
 
   function setLoading(state) {
     if (!btnSend) return;
@@ -235,6 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!validateForm(data)) return;
 
       setLoading(true);
+      formSuccess.hidden = true;
       formErrorMsg.hidden = true;
 
       try {
@@ -247,8 +247,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const result = await response.json();
 
         if (response.ok && result.success) {
-          contactForm.style.display = 'none';
+          contactForm.reset();
+          clearErrors();
           formSuccess.hidden = false;
+          setLoading(false);
         } else {
           throw new Error(result.message || 'Submission failed');
         }
@@ -259,20 +261,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  // "Send another message" resets the form
-  if (btnSendAnother) {
-    btnSendAnother.addEventListener('click', () => {
-      formSuccess.hidden = true;
-      if (contactForm) {
-        contactForm.reset();
-        contactForm.style.display = '';
-        clearErrors();
-      }
-      setLoading(false);
-    });
-  }
-
 
   /* -----------------------------------------------------------------------
      H. FOOTER YEAR
