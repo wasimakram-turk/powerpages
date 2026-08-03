@@ -246,12 +246,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const result = await response.json();
 
-        if (response.ok && result.success) {
-          contactForm.reset();
-          clearErrors();
-          formSuccess.hidden = false;
-          setLoading(false);
-        } else {
+        // NEW CODE:
+         if (response.ok && result.success) {
+           contactForm.reset();
+           clearErrors();
+           
+           // Hide form and show success message
+           contactForm.style.display = 'none';
+           formSuccess.hidden = false;
+           setLoading(false);
+         
+           // Auto-hide success message after 5 seconds
+           setTimeout(() => {
+             formSuccess.hidden = true;
+             contactForm.style.display = 'block';
+           }, 5000);
+         } else {
           throw new Error(result.message || 'Submission failed');
         }
       } catch (err) {
