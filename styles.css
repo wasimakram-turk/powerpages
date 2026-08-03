@@ -1687,3 +1687,40 @@ body.lock { overflow: hidden; }
   .stat-divider { display: none; }
   .hero-stats { gap: 1rem; }
 }
+/* ==========================================================================
+   Custom Thin Theme-Styled Scrollbar
+   ========================================================================== */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--cyan, #00f2fe) var(--bg-dark, #293347);
+}
+
+/* WebKit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 5px; /* Default thin width */
+  height: 5px; /* Horizontal scrollbar height */
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Scrollbar Track (Background) */
+::-webkit-scrollbar-track {
+  background: rgba(10, 12, 16, 0.8); /* Dark theme track */
+}
+
+/* Scrollbar Thumb (Draggable Bar) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--cyan, #00f2fe), var(--purple, #7928ca));
+  border-radius: 10px;
+}
+
+/* Expand width slightly on hover */
+::-webkit-scrollbar:hover {
+  width: 9px;
+  height: 9px;
+}
+
+/* Thumb color change on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan, #00f2fe);
+}
