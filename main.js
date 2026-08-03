@@ -246,24 +246,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const result = await response.json();
 
-        // NEW CODE:
-         if (response.ok && result.success) {
+        if (response.ok && result.success) {
            contactForm.reset();
            clearErrors();
-           
-           // Hide form and show success message
-           contactForm.style.display = 'none';
            formSuccess.hidden = false;
            setLoading(false);
          
-           // Auto-hide success message after 5 seconds
-           setTimeout(() => {
+           // Auto-hide success message after 3 seconds
+           clearTimeout(formSuccess._hideTimer);
+           formSuccess._hideTimer = setTimeout(() => {
              formSuccess.hidden = true;
-             contactForm.style.display = 'block';
-           }, 5000);
+           }, 3000);
          } else {
-          throw new Error(result.message || 'Submission failed');
-        }
+           throw new Error(result.message || 'Submission failed');
+         }
       } catch (err) {
         console.error('Form error:', err);
         formErrorMsg.hidden = false;
