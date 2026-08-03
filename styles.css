@@ -545,6 +545,92 @@ body.lock { overflow: hidden; }
 /* — Left Copy — */
 .hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 1.75rem; }
 
+/* — Right Visual Stack — */
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+  width: 100%;
+}
+
+.profile-photo-card {
+  position: relative;
+  width: min(100%, clamp(260px, 34vw, 320px));
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  border: 1px solid var(--border);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform var(--t-normal) var(--ease), box-shadow var(--t-normal) var(--ease), border-color var(--t-normal) var(--ease);
+  animation: profileFloat 4.4s ease-in-out infinite;
+}
+
+.profile-photo-card:hover {
+  transform: scale(1.03);
+  border-color: rgba(var(--cyan-rgb), 0.35);
+  box-shadow: 0 24px 60px rgba(6,182,212,0.16), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.profile-photo-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(from 180deg at 50% 50%, rgba(6,182,212,0.82), rgba(99,102,241,0.55), rgba(20,184,166,0.28), rgba(6,182,212,0.82));
+  opacity: 0.9;
+  z-index: -1;
+  animation: borderSpin 8s linear infinite;
+}
+
+.profile-photo-glow {
+  position: absolute;
+  inset: 8%;
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(var(--cyan-rgb),0.16) 0%, rgba(var(--indigo-rgb),0.08) 45%, transparent 74%);
+  filter: blur(18px);
+  pointer-events: none;
+  transition: opacity var(--t-normal) var(--ease);
+}
+
+.profile-photo-card:hover .profile-photo-glow {
+  opacity: 0.9;
+}
+
+.profile-photo-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.profile-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+@keyframes profileFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes borderSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .availability-badge {
   display: inline-flex;
   align-items: center;
@@ -602,6 +688,69 @@ body.lock { overflow: hidden; }
   flex-wrap: wrap;
   gap: 12px;
   align-items: center;
+  width: 100%;
+}
+
+.hero-cta-row-right {
+  justify-content: center;
+  max-width: 560px;
+}
+
+/* Portrait badges */
+.portrait-badge {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: var(--r-full);
+  border: 1px solid var(--border);
+  background: rgba(22,22,26,0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--txt-1);
+  font-family: var(--font-head);
+  font-size: 0.72rem;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.28);
+  animation: portraitBadgeFloat 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.portrait-badge-power {
+  top: 8%;
+  right: -6%;
+  color: var(--cyan);
+  border-color: rgba(var(--cyan-rgb), 0.28);
+}
+
+.portrait-badge-html {
+  bottom: 15%;
+  left: -7%;
+  color: var(--indigo);
+  border-color: rgba(var(--indigo-rgb), 0.28);
+  animation-delay: -1.2s;
+}
+
+.portrait-badge-dataverse {
+  top: 38%;
+  left: -8%;
+  color: var(--teal);
+  border-color: rgba(var(--teal-rgb), 0.28);
+  animation-delay: -2s;
+}
+
+.portrait-badge-wordpress {
+  bottom: 6%;
+  right: -2%;
+  color: var(--amber);
+  border-color: rgba(245, 158, 11, 0.28);
+  animation-delay: -3s;
+}
+
+@keyframes portraitBadgeFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
 }
 
 /* Stats row */
@@ -625,7 +774,7 @@ body.lock { overflow: hidden; }
   background-clip: text;
   line-height: 1;
 }
-.stat-label { font-size: 0.75rem; color: var(--txt-2); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+.stat-label { font-size: 0.75rem; color: #ffffff; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
 .stat-divider { width: 1px; height: 36px; background: var(--border); }
 
 /* — Right Panel — */
@@ -634,6 +783,7 @@ body.lock { overflow: hidden; }
   display: flex;
   align-items: center;
   justify-content: center;
+  width: min(100%, 490px);
 }
 
 .panel-glow-ring {
